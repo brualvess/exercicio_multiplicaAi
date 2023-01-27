@@ -1,13 +1,19 @@
+import java.util.Scanner;
+
 public class App {
     public static void main(String[] args) throws Exception {
 
-        multiply(10);
+        multiply();
     }
 
-    public static void multiply(int number) {
+    public static void multiply() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Digite um número: ");
+        int number = Integer.parseInt(scanner.next());
+        System.out.println("Tabela de multiplicação de " + number + ":");
         for (int i = 0; i < 11; i++) {
-            int result = i * number;
-            System.out.println(result);
+            System.out.println(number + " x " + i + " = " + number * i);
+
         }
     }
 }
